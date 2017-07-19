@@ -1,0 +1,22 @@
+{
+  "name": "instanews",
+  "version": "1.0.0",
+  "description": "one page responsive website using NYT API. it is awesome.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isha21/instanewsApiProject2.git"
+  },
+  "author": "Ayesha Kanani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isha21/instanewsApiProject2/issues"
+  },
+  "homepage": "https://github.com/isha21/instanewsApiProject2#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
