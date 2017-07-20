@@ -2,7 +2,8 @@ var gulp = require('gulp'),
 uglify = require("gulp-uglify"),
 rename = require("gulp-rename"),
 watch = require('gulp-watch'),
-browserSync = require('browser-sync').create();
+browserSync = require('browser-sync').create(),
+eslint = require('gulp-eslint');
 
 
 //gulp tasks below
@@ -23,7 +24,7 @@ gulp.task('browser-sync', function() {
             baseDir: "./"
         }
     }); //end of browser synch init
-      gulp.watch('build/js/*.js').on('change', browserSync.reload);//browser only looks in build folder
+      gulp.watch(['build/js/*.js','index.html']).on('change', browserSync.reload);//browser only looks in build folder
 });
 
  //gulp watch function
@@ -31,23 +32,17 @@ gulp.task('watch', function() {
    gulp.watch('js/*.js', ['scripts']);
 }); 
 
-
+//this is lint
+gulp.task('lint',function() {   
+    gulp.src('./js/*.js')
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.format())
+});
 
 
 
  
-gulp.task('stream', function () {
-    // Endless stream mode 
-    return watch('css/**/*.css', { ignoreInitial: false })
-        .pipe(gulp.dest('build'));
-});
- 
-gulp.task('callback', function () {
-    // Callback mode, useful if any plugin in the pipeline depends on the `end`/`flush` event 
-    return watch('css/**/*.css', function () {
-        gulp.src('css/**/*.css')
-            .pipe(gulp.dest('build'));
-    });    
-});
+
  
 gulp.task('default',["watch", "browser-sync"]);
