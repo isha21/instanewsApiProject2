@@ -1,5 +1,30 @@
+li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%; }
+  @media (min-width: 1000px) {
+    li {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 1 50%;
+              flex: 0 1 50%; } }
+
+li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%; }
+  @media (min-width: 600px) {
+    li {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 1 50%;
+              flex: 0 1 50%; } }
+
+body {
+  color: #ffffff;
+  font-size: 16px; }
+
 p {
-  color: white; }
+  color: #ffffff;
+  font-size: 16px; }
 
 body {
   background: black; }
