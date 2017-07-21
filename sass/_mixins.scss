@@ -1,5 +1,5 @@
 // this is for media queries but have to fix some things stil
-$desktop-width: 1000px;
+
 @mixin desktop {
   @media (min-width: $desktop-width) {
     @content;
@@ -12,7 +12,7 @@ li {
    }
 }
 
-$tablet-width: 600px;
+
 @mixin tablet {
   @media (min-width: $tablet-width) {
     @content;
