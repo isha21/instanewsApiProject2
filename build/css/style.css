@@ -112,7 +112,8 @@ select {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 4rem; }
+  padding: 4rem;
+  color: #c2c2c2; }
 
 footer span {
   text-transform: uppercase;
