@@ -1,0 +1,10 @@
+.sitefooter{
+  display:flex;
+  justify-content: center;
+  padding:4rem;
+}
+
+footer span{
+  text-transform:uppercase;
+  font-size: $font-size;
+}
