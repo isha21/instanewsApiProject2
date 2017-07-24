@@ -14,5 +14,22 @@
 
 
 $(function() {
-  
+  var url = 'https://api.nytimes.com/svc/topstories/v2/home.json';
+  url += '?' + $.param({
+  'api-key': '400551b6bccb49268e4376e6cb6180bc'
 });
+$.ajax({
+  url: url,
+  method: 'GET',
+}).done(function(result) {
+  console.log(result);
+}).fail(function(err) {
+  throw err;
+});
+});
+
+
+
+
+
+  
