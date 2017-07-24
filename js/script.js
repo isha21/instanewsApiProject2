@@ -26,26 +26,39 @@
     $('.selectionchoice').addClass('selectioncollapse').removeClass('.selectionchoice');
     // $('.selector').addClass('selectorcollapse').removeclass('selector');
 
-   
-
     $('.loader').show();
 
-  var url = 'https://api.nytimes.com/svc/topstories/v2/home.json';
+  var choice =$('.dropdown').val();
+      url = 'https://api.nytimes.com/svc/topstories/v2/' + choice + '.json';
       url += '?' + $.param({
-  'api-key': '400551b6bccb49268e4376e6cb6180bc'
-});
+     'api-key': '400551b6bccb49268e4376e6cb6180bc'
 
-$.ajax({
-  url: url,
-  method: 'GET',
+     })
 
+
+    $.ajax({
+    url: url,
+    method: 'GET'
+    })
+
+.done(function(data){
+  var newsStories  = ''; 
+  var results = data.results.filter(function(value){
+    return value.multimedia.length>=5;
+  })
+  results.splice(12);
+
+ $.each(results, function(key,value){
+   var images = value.multimedia[4].url,
+       newsstories = value.abstract,
+       url = value.url;
+  newsStories += '<li>'
+
+  console.log(newsstories);
 })
 
-.done(function(result) {
-  console.log(result);
-})
 .fail(function(err) {
   throw err;
     });
   })
-// });
+});
