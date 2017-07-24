@@ -13,39 +13,39 @@
 // there needs to be a function for each step above .append .fail etc
 
 
-$(function() {
+// $(function() {
 
-  $('.dropdown').on('change',function(event){
+
+  $('.dropdown').on('change', function(){
+    //  event.preventDefault();
+
+     
+
     $('.headercontainer').addClass('headercollapse').removeClass('.headercontainer');
     $('.logo').addClass('logocollapse').removeClass('.logo');
     $('.selectionchoice').addClass('selectioncollapse').removeClass('.selectionchoice');
-    $('.selector').addClass('selectorcollapse').removeclass('selector');
+    // $('.selector').addClass('selectorcollapse').removeclass('selector');
 
-    event.preventDefault();
+   
 
-    $('.loader'.show();
+    $('.loader').show();
 
   var url = 'https://api.nytimes.com/svc/topstories/v2/home.json';
-  url += '?' + $.param({
+      url += '?' + $.param({
   'api-key': '400551b6bccb49268e4376e6cb6180bc'
 });
 
 $.ajax({
   url: url,
   method: 'GET',
-  dataType:'jsonp'
+
 })
 
 .done(function(result) {
   console.log(result);
-
-}).fail(function(err) {
+})
+.fail(function(err) {
   throw err;
-});
-});
-
-
-
-
-
-  
+    });
+  })
+// });
