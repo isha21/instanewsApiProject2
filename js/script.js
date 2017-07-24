@@ -14,15 +14,31 @@
 
 
 $(function() {
+
+  $('.dropdown').on('change',function(event){
+    $('.headercontainer').addClass('headercollapse').removeClass('.headercontainer');
+    $('.logo').addClass('logocollapse').removeClass('.logo');
+    $('.selectionchoice').addClass('selectioncollapse').removeClass('.selectionchoice');
+    $('.selector').addClass('selectorcollapse').removeclass('selector');
+
+    event.preventDefault();
+
+    $('.loader'.show();
+
   var url = 'https://api.nytimes.com/svc/topstories/v2/home.json';
   url += '?' + $.param({
   'api-key': '400551b6bccb49268e4376e6cb6180bc'
 });
+
 $.ajax({
   url: url,
   method: 'GET',
-}).done(function(result) {
+  dataType:'jsonp'
+})
+
+.done(function(result) {
   console.log(result);
+
 }).fail(function(err) {
   throw err;
 });
