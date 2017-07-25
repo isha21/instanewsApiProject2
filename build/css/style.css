@@ -120,6 +120,18 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 0.75rem; }
+  @media (min-width: 1000px) {
+    .headercontainer {
+      -webkit-box-pack: left;
+          -ms-flex-pack: left;
+              justify-content: left;
+      -webkit-box-align: left;
+          -ms-flex-align: left;
+              align-items: left;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: colum no wrap;
+              flex-flow: colum no wrap; } }
 
 .logo {
   text-align: center;
@@ -152,14 +164,41 @@ select {
   background-size: cover;
   background-position: 50%;
   text-decoration: none; }
+  @media (min-width: 600px) {
+    .article {
+      width: 50%;
+      -ms-flex-preferred-size: wrap;
+          flex-basis: wrap; } }
+  @media (min-width: 1000px) {
+    .article {
+      width: 25%;
+      -ms-flex-preferred-size: wrap;
+          flex-basis: wrap; } }
 
 .textpict {
   height: 420px;
   width: 100%;
   position: cover; }
+  @media (min-width: 600px) {
+    .textpict {
+      width: 50%;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; } }
+  @media (min-width: 1000px) {
+    .textpict {
+      width: 25%;
+      -ms-flex-flow: wrap;
+          flex-flow: wrap; } }
 
 .selectionchoice P {
   font-size: 12px; }
+  @media (min-width: 1000px) {
+    .selectionchoice P {
+      -webkit-box-pack: left;
+          -ms-flex-pack: left;
+              justify-content: left;
+      text-justify: left;
+      margin-left: 10px; } }
 
 .loader {
   height: 100%;
@@ -191,6 +230,11 @@ a {
   color: #c2c2c2;
   font-family: openssans-light, sans-serif;
   font-size: 14px; }
+  @media (min-width: 1000px) {
+    .sitefooter {
+      -webkit-box-pack: left;
+          -ms-flex-pack: left;
+              justify-content: left; } }
 
 footer span {
   text-transform: uppercase;

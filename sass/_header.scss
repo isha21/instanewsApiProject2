@@ -5,8 +5,13 @@
   justify-content: center;
   align-items:center;
   padding:0.75rem;
-
+  @include desktop{
+    justify-content: left;
+    align-items: left;
+    flex-flow: colum no wrap;
+  }
 }
+
 
 .logo{
   text-align: center;

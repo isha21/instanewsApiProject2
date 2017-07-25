@@ -1,7 +1,4 @@
-// .stories{
-//   display:grid;
-//   grid-template-rows: repeat(12,1fr);
-// }
+
 
 .article{
   height:100%;
@@ -9,16 +6,38 @@
   background-size: cover;
   background-position: 50%;
   text-decoration: none;
+  @include tablet{
+    width:50%;
+    flex-basis: wrap;
+  }
+  @include desktop{
+    width:25%;
+    flex-basis: wrap;
+  }
 }
 
 .textpict{
   height:420px;
   width:100%;
   position:cover;
+  @include tablet{
+    width:50%;
+    flex-wrap: wrap;
+  }
+  @include desktop{
+    width:25%;
+    flex-flow: wrap;
+  }
 }
 
 .selectionchoice P{
   font-size:12px;
+  @include desktop{
+    justify-content: left;
+    text-justify: left;
+    margin-left:10px;
+   
+  }
 }
 
 .loader{
@@ -41,3 +60,4 @@
 a{
   text-decoration:none;
 }
+
