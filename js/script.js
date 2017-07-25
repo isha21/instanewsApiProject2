@@ -52,7 +52,7 @@
        words = value.abstract,
        url = value.url;
 
-       newsStories += '<li>';
+       newsStories += '<li class="textpict">';
        newsStories += '<a href=' + url + '>';
        newsStories += '<div class="article" style="background-image: url(' + images + ')">';
        newsStories += '<p class="words" >';
