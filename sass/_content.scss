@@ -4,24 +4,40 @@
 // }
 
 .article{
-  height:auto;
+  height:100%;
   width:100%;
   background-size: cover;
   background-position: 50%;
+  text-decoration: none;
 }
 
 .textpict{
   height:420px;
-}
-
-.article{
-  height:100%;
-}
-
-.words{
-  height:30%;
+  width:100%;
+  position:cover;
 }
 
 .selectionchoice P{
   font-size:12px;
+}
+
+.loader{
+  height:100%;
+  width:4px;
+}
+
+.storiescontainer{
+  display:flex;
+}
+
+.words{
+  height:50%;
+  color:$font-color;
+  line-height: 1.5rem;
+  font-size:$font-size;
+  font-family:$font-family;
+} 
+
+a{
+  text-decoration:none;
 }

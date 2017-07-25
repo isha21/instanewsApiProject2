@@ -97,7 +97,9 @@ table {
 body {
   color: #ffffff;
   font-size: 16px;
-  font-family: openssans-light, sans-serif; }
+  font-family: openssans-light, sans-serif;
+  font-weight: 300;
+  font-style: normal; }
 
 body {
   background: black; }
@@ -135,23 +137,48 @@ select {
   padding: 2rem;
   font-size: 16px; }
 
+.headercollapse {
+  height: auto; }
+
+.logocollapse {
+  height: auto; }
+
+.selectioncollapse {
+  height: auto; }
+
 .article {
-  height: auto;
+  height: 100%;
   width: 100%;
   background-size: cover;
-  background-position: 50%; }
+  background-position: 50%;
+  text-decoration: none; }
 
 .textpict {
-  height: 420px; }
-
-.article {
-  height: 100%; }
-
-.words {
-  height: 30%; }
+  height: 420px;
+  width: 100%;
+  position: cover; }
 
 .selectionchoice P {
   font-size: 12px; }
+
+.loader {
+  height: 100%;
+  width: 4px; }
+
+.storiescontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.words {
+  height: 50%;
+  color: #ffffff;
+  line-height: 1.5rem;
+  font-size: 16px;
+  font-family: openssans-light, sans-serif; }
+
+a {
+  text-decoration: none; }
 
 .sitefooter {
   display: -webkit-box;
