@@ -1,9 +1,12 @@
+import $ from 'jquery';
+import '../sass/style.scss'
+
+
 $(function() {
 
     // choose select .onclick
     $('.dropdown').on('change', function() {
         event.preventDefault();
-
 
         // header collapse
         $('.headercontainer').addClass('headercollapse').removeClass('.headercontainer');
