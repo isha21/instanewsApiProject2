@@ -5,8 +5,8 @@ li {
   @media (min-width: 1000px) {
     li {
       -webkit-box-flex: 0;
-          -ms-flex: 0 1 50%;
-              flex: 0 1 50%; } }
+          -ms-flex: 0 1 100%;
+              flex: 0 1 100%; } }
 
 li {
   -webkit-box-flex: 0;
@@ -202,17 +202,20 @@ select {
   height: 100%;
   width: 4px; }
 
-.storiescontainer {
+.story-meta {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
-
-.words {
-  height: 50%;
-  color: #ffffff;
-  line-height: 1.5rem;
-  font-size: 16px;
-  font-family: openssans-light, sans-serif; }
+  display: flex;
+  vertical-align: baseline; }
+  .story-meta .words {
+    height: 50%;
+    color: #ffffff;
+    line-height: 1.5rem;
+    font-size: 16px;
+    font-family: openssans-light, sans-serif;
+    position: absolute;
+    -ms-flex-line-pack: bottom;
+        align-content: bottom; }
 
 a {
   text-decoration: none; }
